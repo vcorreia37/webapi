@@ -10,5 +10,7 @@ namespace webapi.Entities
         [Key]
         public int idTipo { get; set; }
         public string tipo { get; set; }
+
+        public virtual Utilizador Utilizador { get; set; }
     }
 }

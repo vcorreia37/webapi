@@ -14,5 +14,11 @@ namespace webapi.Entities
         public string preco { get; set; }
         public string descricao { get; set; }
         public int idEstado { get; set; }
+
+        public virtual ICollection<Reserva> Reservas { get; set; } 
+        public virtual ICollection<Imagem> Imagems { get; set; }
+
+        public virtual Casa Casa { get; set; }
+        public virtual Estado Estado { get; set; }
     }
 }

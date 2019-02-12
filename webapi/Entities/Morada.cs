@@ -14,5 +14,8 @@ namespace webapi.Entities
         public string copPostal { get; set; }
         public string pais { get; set; }
         public string cidade { get; set; }
+
+        public virtual ICollection<Utilizador> Utilizadors { get; set; }
+        public virtual ICollection<Casa> Casas { get; set; }
     }
 }

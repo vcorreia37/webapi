@@ -18,5 +18,12 @@ namespace webapi.Entities
         public int idTipUtilizador { get; set; }
         public string email { get; set; }
 
+        public virtual ICollection<Notificacao> Notificacaos { get; set; }
+        public virtual ICollection<HistoricoUtilizador> HistoricoUtilizadors { get; set; }
+        public virtual ICollection<CasaUtilizador> CasaUtilizadors { get; set; }
+        public virtual ICollection<Reserva> Reservas { get; set; }
+
+        public virtual TipoUtilizadorTB TipoUtilizadorTB { get; set; }
+        public virtual Morada Morada { get; set; }
     }
 }

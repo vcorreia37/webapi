@@ -12,5 +12,7 @@ namespace webapi.Entities
         public int idComentario{ get; set; }
         public string comentario { get; set; }
         public int idReserva { get; set; }
+
+        public virtual Reserva Reserva { get; set; }
     }
 }

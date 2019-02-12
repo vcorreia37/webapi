@@ -10,5 +10,9 @@ namespace webapi.Entities
         [Key]
         public int idEstado { get; set; }
         public string estado { get; set; }
+
+        public virtual ICollection<Casa> Casas { get; set; }
+        public virtual ICollection<Quarto> Quartos { get; set; }
+        public virtual ICollection<Reserva> Reservas { get; set; }
     }
 }

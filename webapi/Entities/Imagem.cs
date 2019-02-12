@@ -13,5 +13,7 @@ namespace webapi.Entities
         public string nomeImagem { get; set; }
         public string contentTypeImagem { get; set; }
         public int idQuarto { get; set; }
+
+        public virtual Quarto Quarto { get; set; }
     }
 }

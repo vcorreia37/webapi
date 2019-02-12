@@ -15,5 +15,11 @@ namespace webapi.Entities
         public int idEstado { get; set; }
         public int idUtilizador { get; set; }
         public int idQuarto { get; set; }
+
+        public virtual ICollection<Comentario> Comentarios { get; set; }
+
+        public virtual Estado Estado { get; set; }
+        public virtual Quarto Quarto { get; set; }
+        public virtual Utilizador Utilizador { get;set; }
     }
 }

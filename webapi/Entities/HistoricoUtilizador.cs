@@ -12,5 +12,7 @@ namespace webapi.Entities
         public int idUtilizador { get; set; }
         public string acao { get; set; }
         public DateTime  dataAcao { get; set; }
+
+        public virtual Utilizador Utilizador { get; set; }
     }
 }

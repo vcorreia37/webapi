@@ -11,5 +11,8 @@ namespace webapi.Entities
         public int idCasaUtilizador { get; set; }
         public int idCasa { get; set; }
         public string nota { get; set; }
+
+        public virtual Utilizador Utilizador { get; set; }
+        public virtual Casa Casa { get; set; }
     }
 }

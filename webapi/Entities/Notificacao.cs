@@ -12,5 +12,8 @@ namespace webapi.Entities
         public int idTipoNotificacao { get; set; }
         public DateTime dataEfetuada { get; set; }
         public int idUtilizador { get; set; }
+
+        public virtual Utilizador Utilizador { get; set; }
+        public virtual TipoNotificacaoTB TipoNotificacaoTB { get; set; }
     }
 }
