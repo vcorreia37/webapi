@@ -10,12 +10,16 @@ namespace webapi.Entities
     {
         [Key]
         public int idUtilizador { get; set; }
+        [MaxLength(50)]
         public string username { get; set; }
+        [MaxLength(50)]
         public string password { get; set; }
+        [MaxLength(200)]
         public string nome { get; set; }
         public int idMorada { get; set; }
-        public string contacto { get; set; }
+        public int contacto { get; set; }
         public int idTipUtilizador { get; set; }
+        [MaxLength(100)]
         public string email { get; set; }
 
         public virtual ICollection<Notificacao> Notificacaos { get; set; }

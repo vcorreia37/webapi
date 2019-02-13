@@ -9,6 +9,7 @@ namespace webapi.Entities
     {
         [Key]
         public int idTipo { get; set; }
+        [MaxLength(20)]
         public string tipo { get; set; }
 
         public virtual Utilizador Utilizador { get; set; }

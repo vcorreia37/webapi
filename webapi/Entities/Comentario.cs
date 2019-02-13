@@ -10,6 +10,7 @@ namespace webapi.Entities
     {
         [Key]
         public int idComentario{ get; set; }
+        [MaxLength(500)]
         public string comentario { get; set; }
         public int idReserva { get; set; }
 

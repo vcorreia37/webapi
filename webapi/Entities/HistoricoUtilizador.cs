@@ -10,6 +10,7 @@ namespace webapi.Entities
         [Key]
         public int idHistorico { get; set; }
         public int idUtilizador { get; set; }
+        [MaxLength(500)]
         public string acao { get; set; }
         public DateTime  dataAcao { get; set; }
 
