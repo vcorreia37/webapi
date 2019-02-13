@@ -10,7 +10,7 @@ namespace webapi.Entities
         [Key]
         public int idCasa { get; set; }
         public int idMorada { get; set; }
-        [MaxLength(500)]
+        [StringLength(500)]
         public string descricao { get; set; }
         public int idEstado { get; set; }
 

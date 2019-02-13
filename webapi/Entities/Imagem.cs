@@ -10,9 +10,9 @@ namespace webapi.Entities
         [Key]
         public int idImagem { get; set; }
         public string imagem { get; set; }
-        [MaxLength(500)]
+        [StringLength(500)]
         public string nomeImagem { get; set; }
-        [MaxLength(500)]
+        [StringLength(500)]
         public string contentTypeImagem { get; set; }
         public int idQuarto { get; set; }
 

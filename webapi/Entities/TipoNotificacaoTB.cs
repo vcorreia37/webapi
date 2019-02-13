@@ -9,7 +9,7 @@ namespace webapi.Entities
     {
         [Key]
         public int idTipoNotificacao { get; set; }
-        [MaxLength(50)]
+        [StringLength(50)]
         public string tipoNotificacao { get; set; }
 
         public virtual ICollection<Notificacao> Notificacaos { get; set; }

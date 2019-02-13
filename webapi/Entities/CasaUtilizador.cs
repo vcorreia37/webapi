@@ -11,7 +11,7 @@ namespace webapi.Entities
         public int idCasaUtilizador { get; set; }
         public int idCasa { get; set; }
         public int idUtilizador { get; set; }
-        [MaxLength(500)]
+        [StringLength(500)]
         public string nota { get; set; }
 
         public virtual Utilizador Utilizador { get; set; }

@@ -9,7 +9,7 @@ namespace webapi.Entities
     {
         [Key]
         public int idEstado { get; set; }
-        [MaxLength(50)]
+        [StringLength(50)]
         public string estado { get; set; }
 
         public virtual ICollection<Casa> Casas { get; set; }

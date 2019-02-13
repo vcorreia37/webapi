@@ -22,9 +22,13 @@ namespace webapi.Context
         public DbSet<TipoUtilizadorTB> TipoUtilizadorTBs { get; set; }
         public DbSet<Utilizador> Utilizadors { get; set; }
 
+        public BbContext(DbContextOptions<BbContext> options) : base(options)
+        {
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //Campos obrigatórios
+            //Campos Unicos
             modelBuilder.Entity<Utilizador>(entity =>
             {
                 entity.HasIndex(e => e.username).IsUnique();

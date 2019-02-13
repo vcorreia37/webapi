@@ -9,7 +9,7 @@ namespace webapi.Entities
     {
         [Key]
         public int idTipo { get; set; }
-        [MaxLength(20)]
+        [StringLength(20)]
         public string tipo { get; set; }
 
         public virtual ICollection<Utilizador> Utilizadors { get; set; }
