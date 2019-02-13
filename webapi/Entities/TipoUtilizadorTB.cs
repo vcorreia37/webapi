@@ -12,6 +12,6 @@ namespace webapi.Entities
         [MaxLength(20)]
         public string tipo { get; set; }
 
-        public virtual Utilizador Utilizador { get; set; }
+        public virtual ICollection<Utilizador> Utilizadors { get; set; }
     }
 }
