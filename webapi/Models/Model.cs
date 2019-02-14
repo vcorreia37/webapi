@@ -7,9 +7,9 @@ namespace webapi.Models
 {
     abstract public class Model<C> where C : class
     {
-        protected BbContext _context;
+        protected BdContext _context;
 
-        public Model(BbContext context)
+        public Model(BdContext context)
         {
             this._context = context;
         }

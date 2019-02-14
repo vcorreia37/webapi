@@ -12,10 +12,13 @@ namespace webapi.Models
 {
     public class UtilizadorModel : Model<Utilizador>
     {
-        public UtilizadorModel(BbContext context) : base(context)
+        public UtilizadorModel(BdContext context) : base(context)
         {
         }
 
-        
+        /*public Boolean UpdateUtilizador(Utilizador utilizador, string password)
+        {
+
+        }*/
     }
 }

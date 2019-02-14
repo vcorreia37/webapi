@@ -12,9 +12,9 @@ namespace webapi.Models
 {
     public class AuthenticationModel
     {
-        private BbContext _context;
+        private BdContext _context;
 
-        public AuthenticationModel(BbContext context)
+        public AuthenticationModel(BdContext context)
         {
             _context = context;
         }
@@ -55,8 +55,8 @@ namespace webapi.Models
             if(_context.Utilizadors.Any(e => e.email == utilizador.email))
                 throw new ApplicationException("O email" + utilizador.email + "já existe!");
 
-            if(string.IsNullOrWhiteSpace(password))
-                throw new ApplicationException("A password não pode conter espaços em branco!")
+            if (string.IsNullOrWhiteSpace(password))
+                throw new ApplicationException("A password não pode conter espaços em branco!");
 
             using (var dbTransaction = _context.Database.BeginTransaction())
             {

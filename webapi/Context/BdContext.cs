@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace webapi.Context
 {
-    public class BbContext : DbContext
+    public class BdContext : DbContext
     {
         public DbSet<Casa> Casas { get; set; }
         public DbSet<CasaUtilizador> CasaUtilizadors { get; set; }
@@ -22,7 +22,7 @@ namespace webapi.Context
         public DbSet<TipoUtilizadorTB> TipoUtilizadorTBs { get; set; }
         public DbSet<Utilizador> Utilizadors { get; set; }
 
-        public BbContext(DbContextOptions<BbContext> options) : base(options)
+        public BdContext(DbContextOptions<BdContext> options) : base(options)
         {
         }
 
