@@ -125,5 +125,41 @@ namespace webapi.Controllers
             utilizador.AsEnumerable().Cast<Utilizador>().ToList();
             return utilizador;
         }
+
+        [HttpGet("{id}/historico")]
+        public IEnumerable<HistoricoUtilizador> GetHistoricoUtilizador(int idUti)
+        {
+            var historico = from h in _context.HistoricoUtilizadors
+                           join u in _context.Utilizadors on h.idUtilizador equals u.idUtilizador
+                           where u.idUtilizador == idUti
+                           select h;
+            historico.AsEnumerable().Cast<HistoricoUtilizador>().ToList();
+            return historico;
+        }
+
+        [HttpGet("{id}/reservas")]
+        public IEnumerable<Reserva> GetReservasUtilizador(int idUti)
+        {
+            var reservas = from r in _context.Reservas
+                           join u in _context.Utilizadors on r.idUtilizador equals u.idUtilizador
+                           where u.idUtilizador == idUti
+                           select r;
+            reservas.AsEnumerable().Cast<Reserva>().ToList();
+            return reservas;
+        }
+
+        [HttpGet("{id}/notificacaoes")]
+        public IEnumerable<Notificacao> GetNotificacoesUtilizador(int idUti)
+        {
+            var notificacoes = from n in _context.Notificacaos
+                           join u in _context.Utilizadors on n.idUtilizador equals u.idUtilizador
+                           where u.idUtilizador == idUti
+                           select n;
+            notificacoes.AsEnumerable().Cast<Notificacao>().ToList();
+            return notificacoes;
+        }
+
+        //Falta a morada
+    
     }
 }

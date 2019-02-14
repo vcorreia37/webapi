@@ -16,6 +16,8 @@ namespace webapi.Models
          * 0 - livre
          * 1 - ocupado
          * 2 - reservado
+         * 3 - ativa
+         * 4 - conluida
          */
 
         public virtual ICollection<Casa> Casas { get; set; }
