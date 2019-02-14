@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-
-namespace webapi.Entities
+namespace webapi.Models
 {
     public class Quarto
     {
@@ -18,7 +17,7 @@ namespace webapi.Entities
         public int idEstado { get; set; }
         public int hospedes { get; set; }
 
-        public virtual ICollection<Reserva> Reservas { get; set; } 
+        public virtual ICollection<Reserva> Reservas { get; set; }
         public virtual ICollection<Imagem> Imagems { get; set; }
 
         public virtual Casa Casa { get; set; }

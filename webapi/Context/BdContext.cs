@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using webapi.Entities;
 using Microsoft.EntityFrameworkCore;
+using webapi.Models;
 
 namespace webapi.Context
 {

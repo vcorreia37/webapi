@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace webapi.Entities
+namespace webapi.Models
 {
     public class HistoricoUtilizador
     {
@@ -12,7 +12,7 @@ namespace webapi.Entities
         public int idUtilizador { get; set; }
         [StringLength(500)]
         public string acao { get; set; }
-        public DateTime  dataAcao { get; set; }
+        public DateTime dataAcao { get; set; }
 
         public virtual Utilizador Utilizador { get; set; }
     }

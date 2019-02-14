@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace webapi.Entities
+namespace webapi.Models
 {
     public class Estado
     {
@@ -11,6 +11,11 @@ namespace webapi.Entities
         public int idEstado { get; set; }
         [StringLength(50)]
         public string estado { get; set; }
+        /*
+         * 0 - livre
+         * 1 - ocupado
+         * 2 - reservado
+         */
 
         public virtual ICollection<Casa> Casas { get; set; }
         public virtual ICollection<Quarto> Quartos { get; set; }
