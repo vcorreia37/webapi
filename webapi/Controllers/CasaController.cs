@@ -7,6 +7,7 @@ using webapi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 
+
 namespace webapi.Controllers
 {
     [ApiController]
@@ -114,5 +115,47 @@ namespace webapi.Controllers
             quartos.AsEnumerable().Cast<Quarto>().ToList();
             return quartos;
         }
+
+        [HttpGet("{id}/livre")]
+        public IEnumerable<Casa> GetCasasLivres()
+        {
+            var casa = from c in _context.Casas
+                       where c.idEstado == 0
+                       select c;
+            casa.AsEnumerable().Cast<Casa>().ToList();
+            return casa;
+        }
+
+        [HttpGet("{id}/reservada")]
+        public IEnumerable<Casa> GetCasasReservadas()
+        {
+            var casa = from c in _context.Casas
+                       where c.idEstado == 2
+                       select c;
+            casa.AsEnumerable().Cast<Casa>().ToList();
+            return casa;
+        }
+
+        [HttpGet("{id}/ocupada")]
+        public IEnumerable<Casa> GetCasasOcupadas()
+        {
+            var casa = from c in _context.Casas
+                       where c.idEstado == 1
+                       select c;
+            casa.AsEnumerable().Cast<Casa>().ToList();
+            return casa;
+        }
+
+        [HttpHead("{id}/morada")]
+        public IEnumerable<Morada> GetMorada(int idCas)
+        {
+            var morada = from m in _context.Moradas
+                         join c in _context.Casas on m.idMorada equals c.idMorada
+                         where c.idCasa == idCas
+                         select m;
+            morada.AsEnumerable().Cast<Morada>().ToList();
+            return morada;
+        }
+
     }
 }
