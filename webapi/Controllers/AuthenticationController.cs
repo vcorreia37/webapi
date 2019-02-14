@@ -103,6 +103,10 @@ namespace webapi.Controllers
                 else
                     return JsonResp.Response(0, "Não foi possivel criar um novo utilizador");
             }
+            catch (Exception e)
+            {
+                return JsonResp.Response(0, "Ocorreu algum erro imprevisto");
+            }
         }
     }
 }
