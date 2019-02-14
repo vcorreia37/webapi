@@ -31,7 +31,7 @@ namespace webapi.Controllers
 
         //Read Comentario
         [HttpGet("{id}")]
-        public async Task<ActionResult<Comentario>> GetReserva(int idCom)
+        public async Task<ActionResult<Comentario>> GetComentario(int idCom)
         {
             Comentario comentario = await _context.Comentarios.FindAsync(idCom);
 
@@ -45,7 +45,7 @@ namespace webapi.Controllers
 
         //Create Comentario
         [HttpPost]
-        public async Task<ActionResult<Comentario>> CreateReserva(Comentario comentario)
+        public async Task<ActionResult<Comentario>> CreateComentario(Comentario comentario)
         {
             _context.Comentarios.Add(comentario);
             await _context.SaveChangesAsync();
@@ -91,7 +91,7 @@ namespace webapi.Controllers
 
         //Delete Comentario
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Comentario>> DeleteComentarrio(int idCom)
+        public async Task<ActionResult<Comentario>> DeleteComentario(int idCom)
         {
             var comentario = await _context.Comentarios.FindAsync(idCom);
             if (comentario == null)
