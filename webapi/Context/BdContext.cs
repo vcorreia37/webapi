@@ -28,6 +28,9 @@ namespace webapi.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
+            base.OnModelCreating(modelBuilder);
+
             //Campos Unicos
             modelBuilder.Entity<Utilizador>(entity =>
             {
